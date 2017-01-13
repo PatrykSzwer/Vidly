@@ -1,5 +1,5 @@
 # Vidly
-MVC training/example application. Movie rental service.
+MVC training/example application. Wines catalogue.
 
 In my development process I'm using tools like:
 - Resharper ver. 2016.3.1

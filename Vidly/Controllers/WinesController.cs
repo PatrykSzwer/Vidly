@@ -4,21 +4,21 @@
     using Vidly.Models;
 
     /// <summary>
-    /// The movies controller.
+    /// The wines controller.
     /// </summary>
-    public class MoviesController : Controller
+    public class WinesController : Controller
     {
         /// <summary>
-        /// The index. GET: Movies/random
+        /// The index. GET: Wines/random
         /// </summary>
         /// <returns>
         /// The <see cref="ActionResult"/>.
         /// </returns>
-        public ActionResult Random()
+        public ActionResult Index()
         {
-            var movie = new Movie { Name = "I Am Legend" };
+            var wine = new Wine { Name = "Kadarka" };
 
-            return View(movie);
+            return View(wine);
         }
     }
 }

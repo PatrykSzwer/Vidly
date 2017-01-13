@@ -1,9 +1,9 @@
 ﻿namespace Vidly.Models
 {
     /// <summary>
-    /// The movie.
+    /// The wine.
     /// </summary>
-    public class Movie
+    public class Wine
     {
         /// <summary>
         /// Gets or sets the id.
