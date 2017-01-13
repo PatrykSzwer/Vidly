@@ -1,4 +1,7 @@
-﻿namespace Vidly.Controllers
+﻿using System.Collections.Generic;
+using Vidly.ViewModel;
+
+namespace Vidly.Controllers
 {
     using System.Web.Mvc;
     using Vidly.Models;
@@ -17,8 +20,15 @@
         public ActionResult Index()
         {
             var wine = new Wine { Name = "Kadarka" };
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Patryk"},
+                new Customer {Name = "Adam"}
+            };
 
-            return View(wine);
+            var viewModel = new WinesViewModel(wine, customers);
+
+            return View(viewModel);
         }
     }
 }

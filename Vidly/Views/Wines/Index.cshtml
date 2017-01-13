@@ -1,10 +1,15 @@
 ﻿<!--Directive, setting model type-->
-@model Vidly.Models.Wine
+@using Vidly.Models
+@model Vidly.ViewModel.WinesViewModel
 
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+<h2>@Model.Wine.Name</h2>
+@foreach (var customer in Model.Customers)
+{
+    <h3>@customer.Name</h3>
+}
 
