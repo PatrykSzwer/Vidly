@@ -1,0 +1,44 @@
+﻿<!--Directive, setting model type-->
+@model IEnumerable<Vidly.Models.Wine>
+
+@{
+    ViewBag.Title = "Wine list";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@*
+    @{
+        var className = Model.Customers.Count > 1 ? "checked" : null;
+    }
+
+    <h2 class="@className">@Model.Wine.Name</h2>
+*@
+
+@if (!Model.Any())
+{
+    <p>No wines in the catalogue yet!</p>
+}
+else
+{
+    <table class="table	table-bordered table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                    </td>*@
+            </tr>
+        }
+    </table>
+}
+

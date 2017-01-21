@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using Vidly.ViewModel;
-
-namespace Vidly.Controllers
+﻿namespace Vidly.Controllers
 {
+    using System.Collections.Generic;
     using System.Web.Mvc;
+
     using Vidly.Models;
+    using Vidly.ViewModel;
 
     /// <summary>
     /// The wines controller.
@@ -17,18 +17,12 @@ namespace Vidly.Controllers
         /// <returns>
         /// The <see cref="ActionResult"/>.
         /// </returns>
-        public ActionResult Index()
+        public ActionResult WineList()
         {
-            var wine = new Wine { Name = "Kadarka" };
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "Patryk"},
-                new Customer {Name = "Adam"}
-            };
+            var wineList = new List<Wine> { new Wine { Name = "Kadarka" }, new Wine { Name = "Hessa" } };
 
-            var viewModel = new WinesViewModel(wine, customers);
 
-            return View(viewModel);
+            return this.View(wineList);
         }
     }
 }

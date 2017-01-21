@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\WinesController.cs" />
@@ -212,7 +213,7 @@
     <Compile Include="ViewModel\WinesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-darkly.css" />
+    <Content Include="Content\bootstrap-united.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -270,7 +271,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Wines\Index.cshtml" />
+    <Content Include="Views\Wines\WineList.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\CustomerList.cshtml" />
+    <Content Include="Views\Customers\CustomerDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
